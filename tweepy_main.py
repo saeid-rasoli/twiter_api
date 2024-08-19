@@ -16,3 +16,4 @@ username = 'elonmusk'
 user = api.get_user(username=username)
 print('username:', user.data['name'])
 print('id:', user.data['id'])
+print(user)
