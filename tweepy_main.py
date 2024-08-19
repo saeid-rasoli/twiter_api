@@ -1,5 +1,5 @@
-import json
 import tweepy
+import json
 
 with open("twitter_keys.json") as infile:
     json_obj = json.load(infile)
@@ -10,9 +10,9 @@ with open("twitter_keys.json") as infile:
     api_key = json_obj["api_key"]
 
 api = tweepy.Client(bearer_token=bearer_token, wait_on_rate_limit=True)
-print('Authenticated...')
+print('Authenticated...\n')
 
 username = 'elonmusk'
 user = api.get_user(username=username)
-print(user.data['name'])
-tweet = api.get_tweet(id=user.data['id'])
+print('username:', user.data['name'])
+print('id:', user.data['id'])
