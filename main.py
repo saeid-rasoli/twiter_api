@@ -12,7 +12,7 @@ async def root():
 
 
 @app.get("/{username}")
-async def get_usename_data(username: str):
+def get_usename_data(username: str):
     with open("twitter_keys.json") as infile:
         json_obj = json.load(infile)
         bearer_token = json_obj["bearer_token"]
